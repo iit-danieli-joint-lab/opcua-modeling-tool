@@ -1,7 +1,18 @@
-## OPC_UA_Model_Designer
+## OPC UA Modeling eXcelerator (UMX)
+
+UMX is a tool for OPC UA developers to create Infromation Models to generate OPC UA compliant Nodesets for use in OPC UA Servers.
+
+We maintain a set of compiled setup binaries on our website at https://beeond.net/
+
+Its models are saved into ModelDesign compliant XML files and can be compiled to generate UANodeset files.
+
+For more information on ModelDesign and Nodeset files, please visit https://github.com/OPCFoundation/UA-ModelCompiler
+
+To learn how to develop OPC UA applications, consider registering for our official trainings at https://beeond.net/opc-ua-developer-training/
 
 
-### Getting started
+
+### Buiding instructions
 #### Linux (Note that umx did not undergo intensive testing in linux.) :
   - Install the required libraries.
 
@@ -20,10 +31,10 @@
 
     - Build xerces
       - Download xerces 3.2 for linux http://xerces.apache.org/xerces-c/download.cgi
-	    - cd xerces-c-3.2.0 (Change path to where the compressed file was extracted.)
+      - cd xerces-c-3.2.0 (Change path to where the compressed file was extracted.)
       - ./configure
-	    - make
-	    - make install  (sudo or su to allow installation)
+      - make
+      - make install  (sudo or su to allow installation)
 
   - Compile umx
     - cd to the umx directory cloned from git
