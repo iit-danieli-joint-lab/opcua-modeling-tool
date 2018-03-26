@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="wxCompileDialog">
+		<title>UA Model Compiler</title>
+		<size>421,197</size>
+		<id_arg>0</id_arg>
+		<object class="wxStaticBox" name="ID_STATICBOX1" variable="StaticBox1" member="yes">
+			<pos>8,8</pos>
+			<size>408,128</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+			<label>Output Directory</label>
+			<pos>16,32</pos>
+			<size>90,15</size>
+			<style>wxALIGN_RIGHT</style>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="txtOutputDir" member="yes">
+			<pos>112,32</pos>
+			<size>256,21</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+			<label>Identifiers Output</label>
+			<pos>15,64</pos>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX2" variable="StaticBox2" member="yes">
+			<pos>8,136</pos>
+			<size>408,48</size>
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="btnOK" member="yes">
+			<label>Compile</label>
+			<pos>256,152</pos>
+			<size>70,23</size>
+			<handler function="OnbtnOKClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="btnCancel" member="yes">
+			<label>Exit</label>
+			<pos>336,152</pos>
+			<size>70,23</size>
+			<handler function="OnbtnCancelClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL3" variable="txtIdentifiersOutput" member="yes">
+			<value>Identifiers.csv</value>
+			<pos>112,64</pos>
+			<size>176,21</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+			<label>Output Type</label>
+			<pos>39,96</pos>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX1" variable="cboOutputType" member="yes">
+			<pos>112,96</pos>
+			<size>256,21</size>
+			<style>wxCB_READONLY|wxCB_DROPDOWN</style>
+		</object>
+		<object class="wxButton" name="ID_BUTTON3" variable="btnLookup" member="yes">
+			<label>...</label>
+			<pos>376,32</pos>
+			<size>32,23</size>
+			<handler function="OnbtnLookupClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX1" variable="chkForceOverwrite" member="yes">
+			<label>Force Overwrite</label>
+			<pos>296,70</pos>
+			<size>108,13</size>
+		</object>
+	</object>
+</wxsmith>

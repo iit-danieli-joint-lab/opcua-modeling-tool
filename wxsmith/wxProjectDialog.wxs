@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="wxProjectDialog">
+		<title>Project Settings</title>
+		<size>663,381</size>
+		<id_arg>0</id_arg>
+		<object class="wxStaticBox" name="ID_STATICBOX1" variable="StaticBox1" member="yes">
+			<pos>8,0</pos>
+			<size>648,136</size>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="txtName" member="yes">
+			<pos>118,32</pos>
+			<size>200,21</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+			<label>Name(XmlPrefix)</label>
+			<pos>16,33</pos>
+			<size>90,13</size>
+			<style>wxALIGN_RIGHT</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+			<label>Model URI</label>
+			<pos>16,66</pos>
+			<size>90,13</size>
+			<style>wxALIGN_RIGHT</style>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL3" variable="txtFullURI" member="yes">
+			<pos>118,64</pos>
+			<size>530,21</size>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX2" variable="StaticBox2" member="yes">
+			<pos>8,328</pos>
+			<size>648,45</size>
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="btnOK" member="yes">
+			<label>OK</label>
+			<pos>476,344</pos>
+			<size>75,23</size>
+			<handler function="OnbtnOKClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="btnCancel" member="yes">
+			<label>Cancel</label>
+			<pos>568,344</pos>
+			<size>72,23</size>
+			<handler function="OnbtnCancelClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText4" member="yes">
+			<label>Project File</label>
+			<pos>16,98</pos>
+			<size>90,13</size>
+			<style>wxALIGN_RIGHT</style>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL4" variable="txtFilename" member="yes">
+			<pos>118,96</pos>
+			<size>530,21</size>
+			<style>wxTE_READONLY</style>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX3" variable="StaticBox3" member="yes">
+			<label>Label</label>
+			<pos>72,480</pos>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX4" variable="StaticBox4" member="yes">
+			<label>Namespaces</label>
+			<pos>8,137</pos>
+			<size>648,190</size>
+		</object>
+		<object class="wxListView" name="ID_LISTVIEW1" variable="lstNamespaces" member="yes">
+			<pos>24,160</pos>
+			<size>624,152</size>
+			<style>wxLC_REPORT|wxLC_SINGLE_SEL</style>
+		</object>
+	</object>
+</wxsmith>

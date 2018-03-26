@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="wxAbout">
+		<title>About UMX</title>
+		<size>400,146</size>
+		<id_arg>0</id_arg>
+		<object class="wxButton" name="ID_BUTTON1" variable="btnOK" member="yes">
+			<label>OK</label>
+			<pos>304,104</pos>
+			<handler function="OnbtnOKClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" subclass="wxHyperlinkCtrl" variable="txtBeeondLink" member="yes">
+			<label>www.beeond.net</label>
+			<pos>184,72</pos>
+			<size>96,16</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText1" member="yes">
+			<label>Copyright (c) 2017</label>
+			<pos>184,48</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT3" variable="lblAppNameAndVersion" member="yes">
+			<label>UA Model eXcelerator ver. unknown</label>
+			<pos>184,24</pos>
+			<size>208,13</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText3" member="yes">
+			<label>UMX</label>
+			<pos>8,16</pos>
+			<size>88,72</size>
+			<font>
+				<size>48</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText2" member="yes">
+			<label>Label</label>
+			<pos>160,192</pos>
+		</object>
+	</object>
+</wxsmith>

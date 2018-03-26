@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ae713699-a2bc-49a5-8f38-fdc1d717c16a}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>examples\simple-client-server-xml\server.py</StartupFile>
+    <SearchPath>examples\simple-client-server-xml\;opcua\;opcua\client\;opcua\common\;opcua\crypto\;opcua\server\;opcua\server\standard_address_space\;opcua\ua\;opcua\ua\uaerrors\;tests\;tools\;schemas\;..\..\Program Files\Anaconda3\Lib\site-packages;..\..\Program Files\Anaconda3\Lib\site-packages\dateutil</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="docs\conf.py" />
+    <Compile Include="examples\client-events.py" />
+    <Compile Include="examples\client-example.py" />
+    <Compile Include="examples\client-minimal.py" />
+    <Compile Include="examples\client_deleting.py" />
+    <Compile Include="examples\client_read-custom_structures.py" />
+    <Compile Include="examples\client_to_demo-this.com.py" />
+    <Compile Include="examples\client_to_kepware.py" />
+    <Compile Include="examples\client_to_prosys.py" />
+    <Compile Include="examples\client_to_prosys_cert.py" />
+    <Compile Include="examples\client_to_prosys_events.py" />
+    <Compile Include="examples\server-callback.py" />
+    <Compile Include="examples\server-custom-object.py" />
+    <Compile Include="examples\server-datavalue-history.py" />
+    <Compile Include="examples\server-enum.py" />
+    <Compile Include="examples\server-events-history.py" />
+    <Compile Include="examples\server-events.py" />
+    <Compile Include="examples\server-example.py" />
+    <Compile Include="examples\server-instantiate-object.py" />
+    <Compile Include="examples\server-methods.py" />
+    <Compile Include="examples\server-minimal.py" />
+    <Compile Include="examples\server-ua-python-mirror.py" />
+    <Compile Include="examples\server-with-encryption.py" />
+    <Compile Include="examples\server-xmlexporter.py" />
+    <Compile Include="examples\simple-client-server-xml\client_minimal.py" />
+    <Compile Include="examples\simple-client-server-xml\server.py" />
+    <Compile Include="examples\test_perf.py" />
+    <Compile Include="opcua\client\client.py" />
+    <Compile Include="opcua\client\ua_client.py" />
+    <Compile Include="opcua\client\__init__.py" />
+    <Compile Include="opcua\common\callback.py" />
+    <Compile Include="opcua\common\copy_node.py" />
+    <Compile Include="opcua\common\events.py" />
+    <Compile Include="opcua\common\event_objects.py" />
+    <Compile Include="opcua\common\instantiate.py" />
+    <Compile Include="opcua\common\manage_nodes.py" />
+    <Compile Include="opcua\common\methods.py" />
+    <Compile Include="opcua\common\node.py" />
+    <Compile Include="opcua\common\shortcuts.py" />
+    <Compile Include="opcua\common\structures_generator.py" />
+    <Compile Include="opcua\common\subscription.py" />
+    <Compile Include="opcua\common\ua_utils.py" />
+    <Compile Include="opcua\common\utils.py" />
+    <Compile Include="opcua\common\xmlexporter.py" />
+    <Compile Include="opcua\common\xmlimporter.py" />
+    <Compile Include="opcua\common\xmlparser.py" />
+    <Compile Include="opcua\common\__init__.py" />
+    <Compile Include="opcua\compat.py" />
+    <Compile Include="opcua\crypto\security_policies.py" />
+    <Compile Include="opcua\crypto\uacrypto.py" />
+    <Compile Include="opcua\crypto\__init__.py" />
+    <Compile Include="opcua\server\address_space.py" />
+    <Compile Include="opcua\server\binary_server_asyncio.py" />
+    <Compile Include="opcua\server\event_generator.py" />
+    <Compile Include="opcua\server\history.py" />
+    <Compile Include="opcua\server\history_sql.py" />
+    <Compile Include="opcua\server\internal_server.py" />
+    <Compile Include="opcua\server\internal_subscription.py" />
+    <Compile Include="opcua\server\server.py" />
+    <Compile Include="opcua\server\standard_address_space\standard_address_space.py" />
+    <Compile Include="opcua\server\standard_address_space\standard_address_space_part10.py" />
+    <Compile Include="opcua\server\standard_address_space\standard_address_space_part11.py" />
+    <Compile Include="opcua\server\standard_address_space\standard_address_space_part13.py" />
+    <Compile Include="opcua\server\standard_address_space\standard_address_space_part3.py" />
+    <Compile Include="opcua\server\standard_address_space\standard_address_space_part4.py" />
+    <Compile Include="opcua\server\standard_address_space\standard_address_space_part5.py" />
+    <Compile Include="opcua\server\standard_address_space\standard_address_space_part8.py" />
+    <Compile Include="opcua\server\standard_address_space\standard_address_space_part9.py" />
+    <Compile Include="opcua\server\standard_address_space\__init__.py" />
+    <Compile Include="opcua\server\subscription_service.py" />
+    <Compile Include="opcua\server\uaprocessor.py" />
+    <Compile Include="opcua\server\users.py" />
+    <Compile Include="opcua\server\__init__.py" />
+    <Compile Include="opcua\tools.py" />
+    <Compile Include="opcua\ua\attribute_ids.py" />
+    <Compile Include="opcua\ua\object_ids.py" />
+    <Compile Include="opcua\ua\status_codes.py" />
+    <Compile Include="opcua\ua\uaerrors\_auto.py" />
+    <Compile Include="opcua\ua\uaerrors\_base.py" />
+    <Compile Include="opcua\ua\uaerrors\__init__.py" />
+    <Compile Include="opcua\ua\uaprotocol_auto.py" />
+    <Compile Include="opcua\ua\uaprotocol_hand.py" />
+    <Compile Include="opcua\ua\uatypes.py" />
+    <Compile Include="opcua\ua\ua_binary.py" />
+    <Compile Include="opcua\ua\__init__.py" />
+    <Compile Include="opcua\__init__.py" />
+    <Compile Include="release.py" />
+    <Compile Include="schemas\download.py" />
+    <Compile Include="schemas\generate_address_space.py" />
+    <Compile Include="schemas\generate_event_objects.py" />
+    <Compile Include="schemas\generate_ids.py" />
+    <Compile Include="schemas\generate_model.py" />
+    <Compile Include="schemas\generate_model_event.py" />
+    <Compile Include="schemas\generate_protocol_python.py" />
+    <Compile Include="schemas\generate_statuscode.py" />
+    <Compile Include="schemas\generate_uaerrors.py" />
+    <Compile Include="schemas\uaprotocol_auto_add.py" />
+    <Compile Include="setup.py" />
+    <Compile Include="tests\tests.py" />
+    <Compile Include="tests\tests_client.py" />
+    <Compile Include="tests\tests_cmd_lines.py" />
+    <Compile Include="tests\tests_common.py" />
+    <Compile Include="tests\tests_crypto_connect.py" />
+    <Compile Include="tests\tests_history.py" />
+    <Compile Include="tests\tests_server.py" />
+    <Compile Include="tests\tests_subscriptions.py" />
+    <Compile Include="tests\tests_uaerrors.py" />
+    <Compile Include="tests\tests_unit.py" />
+    <Compile Include="tests\tests_xml.py" />
+    <Compile Include="test_external_server.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\requirements.txt" />
+    <Content Include="examples\simple-client-server-xml\test_saying.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="docs" />
+    <Folder Include="examples" />
+    <Folder Include="examples\simple-client-server-xml" />
+    <Folder Include="opcua" />
+    <Folder Include="opcua\client" />
+    <Folder Include="opcua\common" />
+    <Folder Include="opcua\crypto" />
+    <Folder Include="opcua\server" />
+    <Folder Include="opcua\server\standard_address_space" />
+    <Folder Include="opcua\ua" />
+    <Folder Include="opcua\ua\uaerrors" />
+    <Folder Include="schemas" />
+    <Folder Include="tests" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

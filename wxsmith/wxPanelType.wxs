@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxPanel" name="wxPanelType">
+		<id_arg>0</id_arg>
+		<object class="wxGridBagSizer" variable="GridBagSizer1" member="no">
+			<growablecols>0</growablecols>
+			<growablerows>0</growablerows>
+			<object class="sizeritem">
+				<object class="wxPanel" name="ID_PANEL1" variable="panelType" member="yes">
+					<object class="wxGridBagSizer" variable="GridBagSizer2" member="no">
+						<growablecols>0</growablecols>
+						<growablerows>0</growablerows>
+						<object class="sizeritem">
+							<object class="wxBoxSizer" variable="BoxSizer2" member="no">
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+										<label>No Class Generation</label>
+										<size>150,-1</size>
+										<maxsize>150,-1</maxsize>
+										<style>wxALIGN_RIGHT</style>
+									</object>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+								<object class="sizeritem">
+									<object class="wxCheckBox" name="ID_CHECKBOX2" variable="chkNoClassGen" member="yes" />
+									<flag>wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+							</object>
+							<col>0</col>
+							<row>1</row>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<option>1</option>
+						</object>
+						<object class="sizeritem">
+							<object class="wxBoxSizer" variable="BoxSizer3" member="no">
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+										<label>Abstract</label>
+										<size>150,13</size>
+										<maxsize>150,-1</maxsize>
+										<style>wxALIGN_RIGHT</style>
+									</object>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+								<object class="sizeritem">
+									<object class="wxCheckBox" name="ID_CHECKBOX1" variable="chkAbstract" member="yes" />
+									<flag>wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+							</object>
+							<col>0</col>
+							<row>0</row>
+							<flag>wxEXPAND</flag>
+							<border>5</border>
+							<option>1</option>
+						</object>
+					</object>
+				</object>
+				<col>0</col>
+				<row>1</row>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxBoxSizer" variable="BoxSizer1" member="no">
+					<object class="sizeritem">
+						<object class="Custom" name="ID_CUSTOM1" subclass="wxPanelNode" variable="panelNode" member="yes">
+							<creating_code>$(THIS) = new $(CLASS)($(PARENT),$(ID));</creating_code>
+							<style></style>
+						</object>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+				</object>
+				<col>0</col>
+				<row>0</row>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+	</object>
+</wxsmith>

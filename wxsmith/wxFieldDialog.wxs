@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="wxFieldDialog">
+		<size>401,242</size>
+		<id_arg>0</id_arg>
+		<object class="wxStaticBox" name="ID_STATICBOX1" variable="StaticBox1" member="yes">
+			<pos>8,8</pos>
+			<size>384,176</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+			<label>Name</label>
+			<pos>12,40</pos>
+			<size>90,21</size>
+			<style>wxALIGN_RIGHT</style>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="txtName" member="yes">
+			<pos>108,36</pos>
+			<size>274,21</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+			<label>Description</label>
+			<pos>12,66</pos>
+			<size>90,21</size>
+			<style>wxALIGN_RIGHT</style>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX2" variable="StaticBox2" member="yes">
+			<pos>8,184</pos>
+			<size>384,48</size>
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="btnOK" member="yes">
+			<label>OK</label>
+			<pos>224,200</pos>
+			<size>70,23</size>
+			<handler function="OnbtnOKClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="btnCancel" member="yes">
+			<label>Cancel</label>
+			<pos>312,200</pos>
+			<size>70,23</size>
+			<handler function="OnbtnCancelClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL3" variable="txtDescription" member="yes">
+			<pos>108,64</pos>
+			<size>274,21</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+			<label>Data Type</label>
+			<pos>12,95</pos>
+			<size>90,21</size>
+			<style>wxALIGN_RIGHT</style>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX1" variable="cboDataType" member="yes">
+			<pos>108,92</pos>
+			<size>228,21</size>
+		</object>
+		<object class="wxButton" name="ID_BUTTON3" variable="btnLookup" member="yes">
+			<label>...</label>
+			<pos>348,92</pos>
+			<size>32,23</size>
+			<handler function="OnbtnLookupClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText4" member="yes">
+			<label>Value Rank</label>
+			<pos>12,123</pos>
+			<size>90,21</size>
+			<style>wxALIGN_RIGHT</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText5" member="yes">
+			<label>Array Dimension</label>
+			<pos>12,150</pos>
+			<size>90,21</size>
+			<style>wxALIGN_RIGHT</style>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="txtArraySize" member="yes">
+			<pos>108,148</pos>
+			<size>40,21</size>
+			<style>wxTE_RIGHT</style>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX2" variable="cboValueRank" member="yes">
+			<pos>108,120</pos>
+			<style>wxCB_READONLY</style>
+		</object>
+	</object>
+</wxsmith>

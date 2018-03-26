@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxPanel" name="wxPanelMethod">
+		<minsize>150,-1</minsize>
+		<id_arg>0</id_arg>
+		<object class="wxGridBagSizer" variable="mainSizer" member="no">
+			<growablecols>0</growablecols>
+			<growablerows>0</growablerows>
+			<object class="sizeritem">
+				<object class="wxBoxSizer" variable="BoxSizer1" member="no">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<object class="wxBoxSizer" variable="BoxSizer2" member="no">
+							<object class="sizeritem">
+								<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+									<label>Symbolic Name</label>
+									<size>150,-1</size>
+									<minsize>150,-1</minsize>
+									<maxsize>150,-1</maxsize>
+									<style>wxALIGN_RIGHT</style>
+								</object>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<minsize>150,-1</minsize>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="txtSymbolicName" member="yes" />
+								<flag>wxALL|wxEXPAND</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+						</object>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBoxSizer" variable="BoxSizer9" member="no">
+							<object class="sizeritem">
+								<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText4" member="yes">
+									<label>Non-Executable</label>
+									<size>150,-1</size>
+									<minsize>150,-1</minsize>
+									<maxsize>150,-1</maxsize>
+									<style>wxALIGN_RIGHT</style>
+								</object>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<minsize>150,-1</minsize>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxCheckBox" name="ID_CHECKBOX1" variable="chkNonExecutable" member="yes" />
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+						</object>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBoxSizer" variable="methodSizer" member="no">
+							<object class="sizeritem">
+								<object class="wxBoxSizer" variable="BoxSizer3" member="no">
+									<orient>wxVERTICAL</orient>
+									<object class="sizeritem">
+										<object class="wxBoxSizer" variable="BoxSizer5" member="no">
+											<object class="sizeritem">
+												<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+													<label> INPUT Parameters</label>
+													<size>405,183</size>
+													<minsize>-1,21</minsize>
+													<maxsize>-1,21</maxsize>
+													<style>wxALIGN_LEFT|wxRAISED_BORDER</style>
+												</object>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<minsize>-1,21</minsize>
+												<option>1</option>
+											</object>
+										</object>
+										<flag>wxEXPAND</flag>
+										<border>5</border>
+									</object>
+									<object class="sizeritem">
+										<object class="wxBoxSizer" variable="BoxSizer8" member="no">
+											<object class="sizeritem">
+												<object class="wxListView" name="ID_LISTVIEW_INPUT" variable="listInput" member="yes">
+													<size>405,190</size>
+													<style>wxLC_REPORT|wxLC_SINGLE_SEL</style>
+												</object>
+												<flag>wxEXPAND</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+										</object>
+										<flag>wxEXPAND</flag>
+										<border>5</border>
+										<option>1</option>
+									</object>
+								</object>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxBoxSizer" variable="BoxSizer4" member="no">
+									<orient>wxVERTICAL</orient>
+									<object class="sizeritem">
+										<object class="wxBoxSizer" variable="BoxSizer6" member="no">
+											<object class="sizeritem">
+												<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+													<label> OUTPUT Parameters</label>
+													<size>-1,21</size>
+													<minsize>-1,21</minsize>
+													<maxsize>-1,21</maxsize>
+													<style>wxALIGN_LEFT|wxRAISED_BORDER</style>
+												</object>
+												<flag>wxLEFT|wxEXPAND</flag>
+												<border>5</border>
+												<minsize>-1,21</minsize>
+												<option>1</option>
+											</object>
+										</object>
+										<flag>wxEXPAND</flag>
+										<border>5</border>
+									</object>
+									<object class="sizeritem">
+										<object class="wxBoxSizer" variable="BoxSizer7" member="no">
+											<object class="sizeritem">
+												<object class="wxListView" name="ID_LISTVIEW_OUTPUT" variable="listOutput" member="yes">
+													<size>405,225</size>
+													<style>wxLC_REPORT|wxLC_SINGLE_SEL</style>
+												</object>
+												<flag>wxLEFT|wxEXPAND</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+										</object>
+										<flag>wxEXPAND</flag>
+										<border>5</border>
+										<option>1</option>
+									</object>
+								</object>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+						</object>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBoxSizer" variable="BoxSizer10" member="no">
+							<object class="sizeritem">
+								<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText5" member="yes">
+									<label>Type Definition</label>
+									<size>150,-1</size>
+									<minsize>150,-1</minsize>
+									<maxsize>150,-1</maxsize>
+									<style>wxALIGN_RIGHT</style>
+								</object>
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxComboBox" name="ID_COMBOBOX1" variable="cboTypeDefinition" member="yes">
+									<style>wxCB_READONLY|wxCB_DROPDOWN</style>
+								</object>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+						</object>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+					</object>
+				</object>
+				<col>0</col>
+				<row>0</row>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+	</object>
+</wxsmith>

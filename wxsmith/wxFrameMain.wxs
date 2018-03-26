@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="wxFrameMain">
+		<title>UA Model eXcelerator</title>
+		<size>1000,600</size>
+		<id_arg>0</id_arg>
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<object class="wxBoxSizer" variable="boxSizerMain" member="no">
+			<object class="sizeritem">
+				<object class="wxBoxSizer" variable="boxSizerTree" member="no">
+					<object class="sizeritem">
+						<object class="wxPanel" name="ID_PANEL_MAIN" subclass="wxScrolledWindow" variable="panelMain" member="yes">
+							<style>wxSIMPLE_BORDER|wxTAB_TRAVERSAL</style>
+							<object class="wxBoxSizer" variable="boxSizerPanelMain" member="no">
+								<object class="sizeritem">
+									<object class="wxTreeCtrl" name="ID_TREEOPC_ID" variable="treeOPCCtrl" member="yes">
+										<image_list>&lt;none&gt;</image_list>
+										<tree_items>
+											<item>treeOPCCtrl</item>
+											<item>&lt;none&gt;</item>
+										</tree_items>
+										<items_text>
+											<item2>treeOPCCtrl</item2>
+											<item2>&lt;none&gt;</item2>
+										</items_text>
+										<size>376,400</size>
+										<minsize>400,300</minsize>
+										<style>wxTR_DEFAULT_STYLE|wxFULL_REPAINT_ON_RESIZE</style>
+										<handler function="OntreeOPCCtrlItemActivated" entry="EVT_TREE_ITEM_ACTIVATED" />
+										<handler function="OntreeOPCCtrlItemRightClick" entry="EVT_TREE_ITEM_RIGHT_CLICK" />
+										<handler function="OntreeOPCCtrlSelectionChanged" entry="EVT_TREE_SEL_CHANGED" />
+									</object>
+									<flag>wxEXPAND</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBoxSizer" variable="boxSizerDetail" member="no">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<object class="wxBoxSizer" variable="boxSizerHeader" member="no">
+												<object class="sizeritem">
+													<object class="wxBoxSizer" variable="boxSizerHeaderObjectType" member="no">
+														<object class="sizeritem">
+															<object class="Custom" name="ID_PANEL_HEADER_OBJ_TYPE" subclass="wxPanelObjectType" variable="pnlHeaderObjectType" member="yes">
+																<creating_code>$(THIS) = new $(CLASS)($(PARENT),$(ID));</creating_code>
+																<style></style>
+																<hidden>1</hidden>
+															</object>
+															<flag>wxALL|wxEXPAND</flag>
+															<border>5</border>
+															<option>1</option>
+														</object>
+													</object>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxBoxSizer" variable="boxSizerHeaderVariableType" member="no">
+														<object class="sizeritem">
+															<object class="Custom" name="ID_PANEL_HEADER_VAR_TYPE" subclass="wxPanelVariableType" variable="pnlHeaderVariableType" member="yes">
+																<creating_code>$(THIS) = new $(CLASS)($(PARENT),$(ID));</creating_code>
+																<style></style>
+																<hidden>1</hidden>
+															</object>
+															<flag>wxALL|wxEXPAND</flag>
+															<border>5</border>
+															<option>1</option>
+														</object>
+													</object>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxBoxSizer" variable="boxSizerHeaderEmpty" member="no">
+														<object class="sizeritem">
+															<object class="wxPanel" name="ID_PANEL_HEADER_EMPTY" variable="pnlHeaderEmpty" member="yes">
+																<hidden>1</hidden>
+																<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+																<object class="wxBoxSizer" variable="BoxSizer1" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxBoxSizer" variable="BoxSizer2" member="no" />
+																		<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																</object>
+															</object>
+															<flag>wxALL|wxEXPAND</flag>
+															<border>5</border>
+															<option>1</option>
+														</object>
+													</object>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxBoxSizer" variable="boxSizerHeaderReferenceType" member="no">
+														<object class="sizeritem">
+															<object class="Custom" name="ID_CUSTOM1" subclass="wxPanelReferenceType" variable="pnlHeaderReferenceType" member="yes">
+																<creating_code>$(THIS) = new $(CLASS)($(PARENT),$(ID));</creating_code>
+																<style></style>
+															</object>
+															<flag>wxALL|wxEXPAND</flag>
+															<border>5</border>
+															<option>1</option>
+														</object>
+													</object>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxBoxSizer" variable="boxSizerHeaderInstance" member="no">
+														<object class="sizeritem">
+															<object class="Custom" name="ID_CUSTOM2" subclass="wxPanelInstance" variable="pnlHeaderInstance" member="yes">
+																<creating_code>$(THIS) = new $(CLASS)($(PARENT),$(ID));</creating_code>
+																<style></style>
+															</object>
+															<flag>wxALL|wxEXPAND</flag>
+															<border>5</border>
+															<option>1</option>
+														</object>
+													</object>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxBoxSizer" variable="boxSizerHeaderReference" member="no">
+														<object class="sizeritem">
+															<object class="Custom" name="ID_CUSTOM3" subclass="wxPanelReference" variable="pnlHeaderReference" member="yes">
+																<creating_code>$(THIS) = new $(CLASS)($(PARENT),$(ID));</creating_code>
+																<style></style>
+															</object>
+															<flag>wxALL|wxEXPAND</flag>
+															<border>5</border>
+															<option>1</option>
+														</object>
+													</object>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxBoxSizer" variable="boxSizerHeaderMethod" member="no">
+														<object class="sizeritem">
+															<object class="Custom" name="ID_PNL_METHOD" subclass="wxPanelMethod" variable="pnlHeaderMethod" member="yes">
+																<creating_code>$(THIS) = new $(CLASS)($(PARENT),$(ID));</creating_code>
+																<style></style>
+															</object>
+															<flag>wxALL|wxEXPAND</flag>
+															<border>5</border>
+															<option>1</option>
+														</object>
+													</object>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxBoxSizer" variable="boxSizerHeaderType" member="no">
+														<object class="sizeritem">
+															<object class="Custom" name="ID_CUSTOM4" subclass="wxPanelType" variable="pnlHeaderType" member="yes">
+																<creating_code>$(THIS) = new $(CLASS)($(PARENT),$(ID));</creating_code>
+																<style></style>
+															</object>
+															<flag>wxALL|wxEXPAND</flag>
+															<border>5</border>
+															<option>1</option>
+														</object>
+													</object>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxBoxSizer" variable="boxSizerHeaderEnumDataType" member="no">
+														<object class="sizeritem">
+															<object class="Custom" name="ID_CUSTOM5" subclass="wxPanelEnumDataType" variable="pnlHeaderEnumDataType" member="yes">
+																<creating_code>$(THIS) = new $(CLASS)($(PARENT),$(ID));</creating_code>
+																<style></style>
+															</object>
+															<flag>wxALL|wxEXPAND</flag>
+															<border>5</border>
+															<option>1</option>
+														</object>
+													</object>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxBoxSizer" variable="boxSizerHeaderStructDataType" member="no">
+														<object class="sizeritem">
+															<object class="Custom" name="ID_CUSTOM6" subclass="wxPanelStructDataType" variable="pnlHeaderStructDataType" member="yes">
+																<creating_code>$(THIS) = new $(CLASS)($(PARENT),$(ID));</creating_code>
+																<style></style>
+															</object>
+															<flag>wxALL|wxEXPAND</flag>
+															<border>5</border>
+															<option>1</option>
+														</object>
+													</object>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxBoxSizer" variable="boxSizerHeaderVariable" member="no">
+														<object class="sizeritem">
+															<object class="Custom" name="ID_CUSTOM7" subclass="wxPanelVariable" variable="pnlHeaderVariable" member="yes">
+																<creating_code>$(THIS) = new $(CLASS)($(PARENT),$(ID));</creating_code>
+																<style></style>
+															</object>
+															<flag>wxALL|wxEXPAND</flag>
+															<border>5</border>
+															<option>1</option>
+														</object>
+													</object>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+											</object>
+											<flag>wxALL|wxEXPAND</flag>
+											<border>5</border>
+											<option>1</option>
+										</object>
+										<object class="sizeritem">
+											<object class="wxBoxSizer" variable="boxSizerDetailFooter" member="no">
+												<object class="sizeritem">
+													<object class="wxPanel" name="ID_PANEL_DETAIL_FOOTER" variable="pnlDetailFooter" member="yes">
+														<hidden>1</hidden>
+														<object class="wxBoxSizer" variable="boxSizerFooter" member="no">
+															<object class="sizeritem">
+																<object class="wxButton" name="ID_BUTTON_UPDATE" variable="btnUpdate" member="yes">
+																	<label>Update</label>
+																	<size>-1,23</size>
+																	<minsize>-1,23</minsize>
+																	<maxsize>-1,23</maxsize>
+																	<handler function="OnbtnUpdateClick" entry="EVT_BUTTON" />
+																</object>
+																<flag>wxALL|wxEXPAND</flag>
+																<border>5</border>
+																<minsize>-1,23</minsize>
+																<option>1</option>
+															</object>
+														</object>
+													</object>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+											</object>
+											<flag>wxALL|wxEXPAND</flag>
+											<border>5</border>
+										</object>
+									</object>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+							</object>
+						</object>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+				</object>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+		<object class="wxMenuBar" variable="menuBarMain" member="yes">
+			<object class="wxMenu" variable="menuFile" member="yes">
+				<label>File</label>
+				<object class="wxMenuItem" name="ID_MENUITEM_NEW" variable="menuNew" member="yes">
+					<label>&amp;New</label>
+					<accel>Ctrl-N</accel>
+					<handler function="OnmenuNewSelected" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM3" variable="menuOpen" member="yes">
+					<label>&amp;Open</label>
+					<accel>Ctrl-O</accel>
+					<handler function="OnmenuOpenSelected" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="ID_MENUSAVE" variable="menuSave" member="yes">
+					<label>&amp;Save</label>
+					<accel>Ctrl-S</accel>
+					<handler function="OnmenuSaveSelected" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM2" variable="menuSaveAs" member="yes">
+					<label>Save &amp;As</label>
+					<accel>Ctrl-A</accel>
+					<handler function="OnmenuSaveAsSelected" entry="EVT_MENU" />
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="ID_MENUITEM1" variable="menuImport" member="yes">
+					<label>&amp;Import</label>
+					<accel>Ctrl-I</accel>
+					<handler function="OnmenuImportSelected" entry="EVT_MENU" />
+				</object>
+				<object class="separator" />
+				<object class="wxMenu" name="ID_MENUITEM10" variable="Menu2" member="yes">
+					<label>Github</label>
+					<object class="wxMenuItem" name="ID_MENUITEM8" variable="mnuNewGithub" member="yes">
+						<label>New</label>
+						<accel>Ctrl-W</accel>
+						<handler function="OnmnuNewGithubSelected" entry="EVT_MENU" />
+					</object>
+					<object class="wxMenuItem" name="ID_MENUITEM11" variable="mnuOpenGithub" member="yes">
+						<label>Open</label>
+						<accel>Ctrl-P</accel>
+						<handler function="OnmnuOpenGithubSelected" entry="EVT_MENU" />
+					</object>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="ID_MENUITEM7" variable="mnuConfig" member="yes">
+					<label>Config</label>
+					<handler function="OnmnuConfigSelected" entry="EVT_MENU" />
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="ID_MENUITEM4" variable="menuExit" member="yes">
+					<label>E&amp;xit</label>
+					<accel>Ctrl-X</accel>
+					<handler function="OnmenuExitSelected" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="Menu1" member="yes">
+				<label>Project</label>
+				<object class="wxMenuItem" name="ID_MENUITEM5" variable="menuSettings" member="yes">
+					<label>Project Settings</label>
+					<accel>Ctrl-P</accel>
+					<handler function="OnmenuSettingsSelected" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM6" variable="mnuCompile" member="yes">
+					<label>Compile</label>
+					<accel>Ctrl-C</accel>
+					<handler function="OnmnuCompileSelected" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="menuHelp" member="yes">
+				<label>&amp;Help</label>
+				<object class="wxMenuItem" name="ID_MENU_ABOUT" variable="mnuAbout" member="yes">
+					<label>A&amp;bout</label>
+					<accel>Ctrl-B</accel>
+					<handler function="OnmnuAboutSelected" entry="EVT_MENU" />
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR_MAIN" variable="statusBarMain" member="yes">
+			<fields>1</fields>
+			<widths>-10</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+		<object class="wxToolBar" name="ID_TOOLBAR1" variable="toolbar" member="yes">
+			<object class="separator" />
+			<object class="tool" name="ID_TOOLBARITEM3" variable="tbOpen" member="yes">
+				<label>Open</label>
+				<bitmap>icons/open.png</bitmap>
+				<bitmap2>icons/open.png</bitmap2>
+				<tooltip>Open UMX Model</tooltip>
+				<handler function="OntbOpenClicked" entry="EVT_TOOL" />
+			</object>
+			<object class="tool" name="ID_TOOLBARITEM1" variable="tbSave" member="yes">
+				<label>Save</label>
+				<bitmap>icons/Save-icon.png</bitmap>
+				<tooltip>Save UMX Model</tooltip>
+				<handler function="OntbSaveClicked" entry="EVT_TOOL" />
+			</object>
+			<object class="separator" />
+			<object class="tool" name="ID_TOOLBARITEM2" variable="tbCompile" member="yes">
+				<label>Compile</label>
+				<bitmap>icons/gear-arrow.png</bitmap>
+				<tooltip>Compile Model</tooltip>
+				<handler function="OntbCompileClicked" entry="EVT_TOOL" />
+			</object>
+		</object>
+	</object>
+</wxsmith>

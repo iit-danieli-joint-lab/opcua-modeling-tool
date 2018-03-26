@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="wxConfig">
+		<title>UMX Settings</title>
+		<size>536,167</size>
+		<id_arg>0</id_arg>
+		<object class="wxStaticBox" name="ID_STATICBOX1" variable="StaticBox1" member="yes">
+			<pos>8,0</pos>
+			<size>520,112</size>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX2" variable="StaticBox2" member="yes">
+			<pos>8,112</pos>
+			<size>520,48</size>
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="btnSave" member="yes">
+			<label>Save</label>
+			<pos>328,128</pos>
+			<handler function="OnbtnSaveClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="btnClose" member="yes">
+			<label>Close</label>
+			<pos>424,128</pos>
+			<handler function="OnbtnCloseClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+			<label>Compiler Executable</label>
+			<pos>16,34</pos>
+			<size>112,16</size>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="txtExecutable" member="yes">
+			<pos>128,32</pos>
+			<size>352,21</size>
+		</object>
+		<object class="wxButton" name="ID_BUTTON3" variable="btnCompilerPath" member="yes">
+			<label>...</label>
+			<pos>488,32</pos>
+			<size>32,23</size>
+			<handler function="OnbtnCompilerPathClick" entry="EVT_BUTTON" />
+		</object>
+	</object>
+</wxsmith>

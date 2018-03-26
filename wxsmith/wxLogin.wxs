@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="wxLogin">
+		<title>Github Login</title>
+		<size>400,134</size>
+		<pos_arg>1</pos_arg>
+		<size_arg>1</size_arg>
+		<object class="wxStaticBox" name="ID_STATICBOX1" variable="StaticBox1" member="yes">
+			<pos>8,0</pos>
+			<size>384,80</size>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX2" variable="StaticBox2" member="yes">
+			<pos>8,80</pos>
+			<size>384,48</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+			<label>Username</label>
+			<pos>24,16</pos>
+			<size>80,13</size>
+			<style>wxALIGN_RIGHT</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+			<label>Password</label>
+			<pos>24,40</pos>
+			<size>80,13</size>
+			<style>wxALIGN_RIGHT</style>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="txtUsername" member="yes">
+			<pos>120,16</pos>
+			<size>200,21</size>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="txtPassword" member="yes">
+			<pos>120,40</pos>
+			<size>200,21</size>
+			<style>wxTE_PROCESS_ENTER|wxTE_PASSWORD</style>
+			<handler function="OntxtPasswordTextEnter" entry="EVT_TEXT_ENTER" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="btnOK" member="yes">
+			<label>Ok</label>
+			<pos>192,96</pos>
+			<handler function="OnbtnOKClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="btnCancel" member="yes">
+			<label>Cancel</label>
+			<pos>296,96</pos>
+			<handler function="OnbtnCancelClick" entry="EVT_BUTTON" />
+		</object>
+	</object>
+</wxsmith>
