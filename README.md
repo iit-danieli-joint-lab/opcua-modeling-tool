@@ -68,8 +68,8 @@ To learn how to develop OPC UA applications, consider registering for our offici
   - Compile umx
     - Open MinGW-w64 "Run Terminal" (There shoud be a shortcut in the Programs/Apps created from the installation.)
       - cd to the umx directory cloned from git
-      - cp _Make.windows.properties Make.windows.properties (Copy the user sample template for windows Makefile include)
-      - Configure/Edit the Makefile.windows.properties. Property values vary depending on the installation paths of the required libraries.
+      - cp _Make.win.properties Make.win.properties (Copy the user sample template for windows Makefile include)
+      - Configure/Edit the Makefile.windows.properties. Property values vary depending on the installation paths of the required libraries(MinGW-w64, wxWidgets, xerces and xsd).
       - mingw32-make
 
   - Run (Put this in a batch file.)
