@@ -36,7 +36,7 @@ OPCImporter::~OPCImporter()
 std::string OPCImporter::GetMergedFile()
 {
     //Since we want an absolute path of the temp merged file location, and not relative, then
-    //we have to convert it because code synthesis requires a URL.
+    //we have to convert it to a URL for synthesis to recognize it.
     string url = m_mergedFile;
     for (size_t i = 0; i < url.length(); ++i)
     {
@@ -69,7 +69,7 @@ void OPCImporter::MergeInherited(DOMElement* rootElement, DOMLSSerializer* mainS
                                  const char* rootElementFilename, XMLReader &mainRootElementXMLReader,
                                  DOMNode* mainDocRootNode)
 {
-        XMLCh *namespaceTag = XMLString::transcode("Namespace"); //
+        XMLCh *namespaceTag = XMLString::transcode("Namespace");
         XMLCh *namespaceURI = XMLString::transcode("http://opcfoundation.org/UA/ModelDesign.xsd");
         xercesc::DOMNodeList* namespaceList = rootElement->getElementsByTagNameNS(namespaceURI, namespaceTag);
 
@@ -101,12 +101,8 @@ void OPCImporter::MergeInherited(DOMElement* rootElement, DOMLSSerializer* mainS
             {
                 fInherited.SetExt("xml");
                 if (!fInherited.Exists())
-                {
-                    cerr << "THROW: Could not find Namespace FilePath:" << sFilePath << "\n";
                     throw wxString::Format("Error: Could not find Namespace FilePath:%s", sFilePath);
-                }
             }
-
 
             DOMNode *inheritedDOM = GetDOM(fInherited.GetFullPath(), readerInherited);
             DOMElement* inheritedRootElement = dynamic_cast<DOMElement*>(inheritedDOM);
@@ -136,7 +132,7 @@ void OPCImporter::MergeInherited(DOMElement* rootElement, DOMLSSerializer* mainS
                         XMLString::release(&nodeNS);
                     }
 
-                    cout << "Reading element:" << sNodeName << " ns:" << sNodeNS << "\n";
+                    //cout << "Reading element:" << sNodeName << " ns:" << sNodeNS << std::endl;
 
                     //TODO: Skip inherited Namespaces for now.
                     //      I think we need to merge the inherited namespaces and mark it as node_owner=builtin.
@@ -147,7 +143,9 @@ void OPCImporter::MergeInherited(DOMElement* rootElement, DOMLSSerializer* mainS
 
                     DOMNode *importedNode = mainRootElementXMLReader.GetDocument()->importNode(currentNode, true);
                     /* Add a StringId attribute to the inherited node because we don't allow it to be modified from the current project. */
-                    if( DOMNode::ELEMENT_NODE == currentNode->getNodeType()) //We have to make sure that is an element node as everything is a node, otherwise we may add an attribute to a blank line #text type which will crash.
+                    if( DOMNode::ELEMENT_NODE == currentNode->getNodeType()) //We have to make sure that is an element node as everything is a node,
+									     //otherwise we may add an attribute to a blank line #text type 
+									     //blowing up the whole thing.
                     {
 
                         DOMElement* importedElement = dynamic_cast<DOMElement*>(importedNode);
@@ -161,8 +159,8 @@ void OPCImporter::MergeInherited(DOMElement* rootElement, DOMLSSerializer* mainS
                 }catch(DOMException &ex)
                 {
                     char* message = XMLString::transcode(ex.msg);
-                    cerr << "DOMNode::appendChild Exception message is: \n"
-                         << message << "\n";
+                    cerr << "DOMNode::appendChild Exception message is:" << std::endl
+                         << message << std::endl;
                     XMLString::release(&message);
                 }
             }
@@ -246,10 +244,12 @@ bool OPCImporter::MergeUMXToBuiltInTypes(const char* umxFilename, wxString& erro
                        || nsPrefix.Cmp(_("xsd")) == 0
                        || nsPrefix.Cmp(_("xsi")) == 0) )
                 {
+                    /*  
                     cout << "MapInfo Namespace: [" << sNodeName << "]"
-                            << "sNodeName Len:" << sNodeName.Len() << " indexFound:" << indexFound
-                            << " ns prefix:" << nsPrefix
-                            << " value:" << sNodeValue.ToStdString() << " element text: " << sNS.ToStdString() << "\n";
+                         << "sNodeName Len:" << sNodeName.Len() << " indexFound:" << indexFound
+                         << " ns prefix:" << nsPrefix
+                         << " value:" << sNodeValue.ToStdString() << " element text: " << sNS.ToStdString() << std::endl;
+                    */
                     modelNSInfoMap[nsPrefix.ToStdString()] = sNodeValue.ToAscii();
                 }
             }
@@ -272,8 +272,8 @@ bool OPCImporter::MergeUMXToBuiltInTypes(const char* umxFilename, wxString& erro
             }catch(DOMException &ex)
             {
                 char* message = XMLString::transcode(ex.msg);
-                cerr << "DOMNode::appendChild Exception message is: \n"
-                     << message << "\n";
+                cerr << "DOMNode::appendChild Exception message is: "
+                     << message << std::endl;
                 XMLString::release(&message);
             }
         }
@@ -293,27 +293,25 @@ bool OPCImporter::MergeUMXToBuiltInTypes(const char* umxFilename, wxString& erro
 
         /****************************************************************************/
         /* Write the updated umx DOM to a temp file which will be opened by the ModelDesign */
-        char *documentText = xercesc::XMLString::transcode(serializer->writeToString(readerUMX.GetDocument()));
-        wxString sDocText = documentText;
-        XMLString::release(&documentText);
         std::ofstream mergedOutFile;
-
         wxFileName filename(wxStandardPaths::Get().GetTempDir(), "umx_merged.xml");
         m_mergedFile = filename.GetFullPath();
         mergedOutFile.open(filename.GetFullPath());
-        mergedOutFile << sDocText.ToStdString() << "\n";
+        char *documentText = XMLString::transcode(serializer->writeToString(readerUMX.GetDocument()));
+        mergedOutFile << documentText << std::endl;
+        XMLString::release(&documentText);
         mergedOutFile.close();
 
         success = true;
     }
     catch(wxString &err)
     {
-        cerr << "OPCImporter::MergeUMXToBuiltInTypes Error1: " << err << "\n";
+        cerr << "OPCImporter::MergeUMXToBuiltInTypes Error1: " << err << std::endl;
         errorOut = err;
     }
     catch(...)
     {
-        cerr << "OPCImporter::MergeUMXToBuiltInTypes Error: Failed to open " << umxFilename << "\n";
+        cerr << "OPCImporter::MergeUMXToBuiltInTypes Error: Failed to open " << umxFilename << std::endl;
         errorOut = wxString::Format("Failed to open %s. Error parsing.", umxFilename);
     }
 
@@ -369,7 +367,7 @@ bool OPCImporter::Import(const char* importFilename)
         const char *importMarker = "<!-- IMPORT MARKER -->";
         while (std::getline(inFile, line))
         {
-            outFile << line << "\n";
+            outFile << line << std::endl;
 
             //Insert the imported file content after the ModelDesign element.
             if (  !endOfModelDesignElement
@@ -384,7 +382,7 @@ bool OPCImporter::Import(const char* importFilename)
                 {
                     xercesc::DOMNode* currentNode = children->item(ix) ;
                     char *childNodeString = xercesc::XMLString::transcode(serializer->writeToString(currentNode));
-                    outFile << childNodeString << "\n";
+                    outFile << childNodeString << std::endl;
                     XMLString::release(&childNodeString);
                 }
             }
@@ -392,21 +390,21 @@ bool OPCImporter::Import(const char* importFilename)
         success = true;
     }catch (...)
     {
-        cerr << "OPCImporter Error: Failed to merge import and template file.\n";
+        cerr << "OPCImporter Error: Failed to merge import and template file." << std::endl;
     }
 
     try{
         outFile.close();
     }catch(...)
     {
-        cerr << "OPCImporter Error: Failed to close outFile.\n";
+        cerr << "OPCImporter Error: Failed to close outFile." << std::endl;
     }
 
     try{
         inFile.close();
     }catch(...)
     {
-        cerr << "OPCImporter Error: Failed to close inFile.\n";
+        cerr << "OPCImporter Error: Failed to close inFile." << std::endl;
     }
 
     if (serializer != 0)
