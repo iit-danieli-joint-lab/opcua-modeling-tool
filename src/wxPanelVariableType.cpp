@@ -90,19 +90,19 @@ wxPanelVariableType::wxPanelVariableType(wxWindow* parent,wxWindowID id,const wx
 	Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxPanelVariableType::OnbtnDataTypeLookupClick);
 	//*)
 
-    vector<wxString> cboList;
-    cboList.push_back("String");
-    cboList.push_back("Boolean");
-    cboList.push_back("Double");
-    cboList.push_back("UInt32");
-    cboList.push_back("Byte");
+    wxArrayString cboList;
+    cboList.Add("String");
+    cboList.Add("Boolean");
+    cboList.Add("Double");
+    cboList.Add("UInt32");
+    cboList.Add("Byte");
 	this->cboDataType->Set(cboList);
 
-    vector<wxString> cboValueRankList;
-    cboValueRankList.push_back("Scalar");
-    cboValueRankList.push_back("Array");
-    cboValueRankList.push_back("ScalarOrArray");
-    cboValueRankList.push_back("OneOrMoreDimensions");
+    wxArrayString cboValueRankList;
+    cboValueRankList.Add("Scalar");
+    cboValueRankList.Add("Array");
+    cboValueRankList.Add("ScalarOrArray");
+    cboValueRankList.Add("OneOrMoreDimensions");
 	this->cboValueRank->Set(cboValueRankList);
 }
 

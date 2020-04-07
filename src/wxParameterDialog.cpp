@@ -64,10 +64,10 @@ wxParameterDialog::wxParameterDialog(ModelDesign *model, wxWindow* parent, Param
 	cboDataType->MoveAfterInTabOrder(txtDescription);
 	txtName->SetFocus();
 
-    vector<wxString> cboList;
-    cboList.push_back("Boolean");
-    cboList.push_back("UInt32");
-    cboList.push_back("Byte");
+    wxArrayString cboList;
+    cboList.Add("Boolean");
+    cboList.Add("UInt32");
+    cboList.Add("Byte");
     //cboList.push_back("...");
 	this->cboDataType->Set(cboList);
 

@@ -58,12 +58,12 @@ wxPanelVariable::wxPanelVariable(wxWindow* parent,wxWindowID id,const wxPoint& p
 	//*)
 
     this->m_boxSizerDataType = boxSizerDataType;
-    vector<wxString> cboList;
-    cboList.push_back("String");
-    cboList.push_back("Boolean");
-    cboList.push_back("Double");
-    cboList.push_back("UInt32");
-    cboList.push_back("Byte");
+    wxArrayString cboList;
+    cboList.Add("String");
+    cboList.Add("Boolean");
+    cboList.Add("Double");
+    cboList.Add("UInt32");
+    cboList.Add("Byte");
     //cboList.push_back("...");
 	this->cboDataType->Set(cboList);
 

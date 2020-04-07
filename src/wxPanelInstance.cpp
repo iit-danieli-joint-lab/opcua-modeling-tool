@@ -88,15 +88,15 @@ wxPanelInstance::wxPanelInstance(wxWindow* parent,wxWindowID id,const wxPoint& p
     this->m_instanceInternalSizer   = instanceInternalSizer;
     this->m_boxSizerTypeDefinition  = boxSizerTypeDefinition;
 
-    vector<wxString> cboList;
-    cboList.push_back("None");
-    cboList.push_back("Mandatory");
-    cboList.push_back("Optional");
-    cboList.push_back("ExposesItsArray");
-    cboList.push_back("CardinalityRestriction");
-    cboList.push_back("MandatoryShared");
-    cboList.push_back("OptionalPlaceholder");
-    cboList.push_back("MandatoryPlaceholder");
+    wxArrayString cboList;
+    cboList.Add("None");
+    cboList.Add("Mandatory");
+    cboList.Add("Optional");
+    cboList.Add("ExposesItsArray");
+    cboList.Add("CardinalityRestriction");
+    cboList.Add("MandatoryShared");
+    cboList.Add("OptionalPlaceholder");
+    cboList.Add("MandatoryPlaceholder");
 	this->cboModeling->Set(cboList);
     m_typeDefNodeSelected = 0;
 }

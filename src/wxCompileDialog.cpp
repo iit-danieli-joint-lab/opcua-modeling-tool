@@ -69,10 +69,10 @@ wxCompileDialog::wxCompileDialog(std::string projectFile, wxWindow* parent, wxWi
 	cboOutputType->MoveAfterInTabOrder(txtIdentifiersOutput);
 	txtOutputDir->SetFocus();
 
-    vector<wxString> cboList;
-    cboList.push_back("C#");
-    cboList.push_back("AnsiC");
-    cboList.push_back("Stack");
+    wxArrayString cboList;
+    cboList.Add("C#");
+    cboList.Add("AnsiC");
+    cboList.Add("Stack");
     this->cboOutputType->Set(cboList);
     this->cboOutputType->SetSelection(0);
 
