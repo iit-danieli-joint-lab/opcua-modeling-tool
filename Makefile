@@ -34,7 +34,7 @@ else
 endif
 
 #CXXFLAGS:=-std=c++98 $(DEBUG) $(WXCXXFLAGS) -I./inc -I./inc/synthesis -I./inc/SimpleJSON $(USER_INCLUDES)
-CXXFLAGS:=-std=c++98 -Wall -Werror $(DEBUG) $(DEBUG_CONSOLE) $(WXCXXFLAGS) $(LOG_FILE) -I./inc -I./inc/synthesis -I./inc/simpleJSON $(USER_INCLUDES)
+CXXFLAGS:=-std=c++11 $(DEBUG) $(DEBUG_CONSOLE) $(WXCXXFLAGS) $(LOG_FILE) -I./inc -I./inc/synthesis -I./inc/simpleJSON $(USER_INCLUDES)
 LIBS=$(WXLIBS) $(USER_LIBS) 
 LDFLAGS=$(DEBUG)
 
